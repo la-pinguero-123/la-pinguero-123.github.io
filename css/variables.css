@@ -1,0 +1,18 @@
+:root {
+    --red-primary: #ff006e;
+    --red-dark: #cc0033;
+    --yellow-accent: #ffa500;
+    --cyan-accent: #00ffff;
+    --green-status: #39ff14;
+    --dark-bg: #0a0e27;
+    --dark-panel: #0f0a1a;
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --grid: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(255, 0, 110, 0.02) 2px,
+                                      rgba(255, 0, 110, 0.02) 4px
+    );
+}

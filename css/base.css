@@ -1,0 +1,25 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: var(--dark-bg);
+    overflow: hidden;
+    font-family: "Courier New", monospace;
+    width: 100%;
+    height: 100%;
+}
+
+#main-content {
+width: 100%;
+height: 100%;
+display: block;
+}

@@ -1,0 +1,30 @@
+.header-panel {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 600;
+    max-width: 280px;
+}
+
+.project-title {
+    background: var(--dark-panel);
+    border: 2px solid var(--red-primary);
+    padding: 12px;
+    margin-bottom: 8px;
+    box-shadow: 0 0 15px rgba(255, 0, 110, 0.3);
+}
+
+.project-title h1 {
+    font-size: 18px;
+    color: var(--text-primary);
+    text-shadow: 0 0 10px var(--red-primary);
+    letter-spacing: 2px;
+    margin-bottom: 3px;
+}
+
+.project-subtitle {
+    font-size: 9px;
+    color: var(--yellow-accent);
+    text-shadow: 0 0 8px var(--yellow-accent);
+    letter-spacing: 1px;
+}

@@ -1,0 +1,199 @@
+:root {
+  --primary: #ff006e;
+  --accent: #00ffff;
+  --dark: #0a0e27;
+  --panel: #0f0a1a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--dark);
+  color: var(--accent);
+  font-family: "Courier New", monospace;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 0, 110, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) rgba(255, 0, 110, 0.05);
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 280px;
+  background: rgba(255, 0, 110, 0.1);
+  border-right: 2px solid var(--primary);
+  padding: 30px 20px;
+  position: relative;
+}
+
+.sidebar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--primary);
+}
+
+.sidebar-header {
+  margin-bottom: 40px;
+}
+
+.sidebar-header h1 {
+  font-size: 32px;
+  text-shadow: 0 0 15px var(--primary);
+  letter-spacing: 3px;
+  margin-bottom: 5px;
+}
+
+.callsign {
+  font-size: 10px;
+  color: var(--primary);
+  text-shadow: 0 0 10px var(--primary);
+  letter-spacing: 2px;
+}
+
+.sidebar-section {
+  margin-bottom: 30px;
+}
+
+.sidebar-section h3 {
+  font-size: 11px;
+  color: var(--primary);
+  text-shadow: 0 0 8px var(--primary);
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--primary);
+  padding-bottom: 8px;
+}
+
+.status {
+  color: #ffa500;
+  text-shadow: 0 0 10px #ffa500;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.tag {
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid var(--accent);
+  padding: 6px 8px;
+  margin-bottom: 5px;
+  font-size: 11px;
+  border-radius: 0;
+}
+
+.year {
+  font-size: 14px;
+  color: var(--accent);
+  text-shadow: 0 0 10px var(--accent);
+}
+
+.content {
+  flex: 1;
+  padding: 40px;
+  max-width: 800px;
+}
+
+.content-header {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.header-line {
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), transparent);
+  margin-bottom: 15px;
+}
+
+.content-header h2 {
+  font-size: 24px;
+  color: var(--accent);
+  text-shadow: 0 0 15px var(--accent);
+  letter-spacing: 2px;
+}
+
+.text-block {
+  margin-bottom: 30px;
+  background: rgba(0, 255, 255, 0.05);
+  border-left: 3px solid var(--accent);
+  padding: 20px;
+  line-height: 1.8;
+}
+
+.text-block h3 {
+  color: var(--primary);
+  text-shadow: 0 0 10px var(--primary);
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.text-block p {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.instruction-list {
+  list-style: none;
+  font-size: 12px;
+}
+
+.instruction-list li {
+  padding: 8px 0 8px 20px;
+  position: relative;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.instruction-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+}
+
+.content-footer {
+  margin-top: 50px;
+  border-top: 2px dashed var(--primary);
+  padding-top: 20px;
+}
+
+.footer-line {
+  height: 1px;
+  background: var(--accent);
+  margin-bottom: 15px;
+}
+
+.footer-text {
+  font-size: 11px;
+  color: var(--primary);
+  text-shadow: 0 0 10px var(--primary);
+  letter-spacing: 2px;
+}

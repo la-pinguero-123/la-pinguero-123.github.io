@@ -1,0 +1,123 @@
+.point {
+    position: absolute;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    user-select: none;
+    z-index: 50;
+}
+
+.point-icon {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-glow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--cyan-accent);
+    box-shadow: 0 0 15px var(--cyan-accent), inset 0 0 15px rgba(0, 255, 255, 0.2);
+    animation: glow-pulse 2s infinite;
+}
+
+.icon-inner {
+    position: relative;
+    width: 28px;
+    height: 28px;
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px solid var(--cyan-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.icon-default {
+    font-size: 16px;
+    color: var(--yellow-accent);
+    text-shadow: 0 0 10px var(--yellow-accent);
+}
+
+.point:hover .icon-glow {
+    border-color: var(--yellow-accent);
+    box-shadow: 0 0 25px var(--yellow-accent),
+    inset 0 0 15px rgba(255, 165, 0, 0.3);
+}
+
+.point:hover .icon-inner {
+    border-color: var(--yellow-accent);
+    background: rgba(255, 165, 0, 0.2);
+    transform: scale(1.1);
+}
+
+.icon-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 5px var(--red-primary));
+}
+
+.point-preview {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    z-index: 100;
+}
+
+.point:hover .point-preview {
+    opacity: 1;
+}
+
+.preview-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 2px solid var(--red-primary);
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--red-primary), 0 0 40px rgba(255, 0, 110, 0.5);
+    margin-bottom: 8px;
+    display: block;
+    clip-path: circle(50%);
+}
+
+.preview-info {
+    background: var(--dark-panel);
+    border: 1px solid var(--red-primary);
+    padding: 8px 12px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 0, 110, 0.2);
+}
+
+.preview-name {
+    font-size: 12px;
+    color: var(--text-primary);
+    text-shadow: 0 0 8px var(--red-primary);
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.point.hidden {
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+.point.found .icon-glow {
+    border: 3px solid var(--yellow-accent);
+    box-shadow: 0 0 30px var(--yellow-accent), 0 0 20px var(--red-primary),
+    inset 0 0 20px rgba(255, 165, 0, 0.3);
+    animation: glow-pulse-found 1s infinite;
+}
+
+.point.found .icon-inner {
+    border-color: var(--yellow-accent);
+    background: rgba(255, 165, 0, 0.15);
+    box-shadow: inset 0 0 15px rgba(255, 165, 0, 0.3);
+}
