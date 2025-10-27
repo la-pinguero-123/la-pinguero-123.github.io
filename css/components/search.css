@@ -1,0 +1,90 @@
+ .search-panel {
+ position: fixed;
+ bottom: 20px;
+ left: 20px;
+ z-index: 500;
+ }
+ .search-container {
+ width: 280px;
+ background: var(--dark-panel);
+ border: 2px solid var(--red-primary);
+ padding: 12px;
+ box-shadow: 0 0 15px rgba(255, 0, 110, 0.3);
+ }
+ .search-label {
+ font-size: 9px;
+ color: var(--yellow-accent);
+ text-shadow: 0 0 8px var(--yellow-accent);
+ letter-spacing: 1px;
+ margin-bottom: 8px;
+ font-weight: bold;
+ }
+ .search-box {
+ position: relative;
+ margin-bottom: 10px;
+ }
+ .search-input {
+ width: 100%;
+ background: rgba(255, 0, 110, 0.05);
+ border: 1px solid var(--red-primary);
+ color: var(--text-primary);
+ padding: 6px 8px;
+ font-family: "Courier New", monospace;
+ font-size: 11px;
+ letter-spacing: 0.5px;
+ transition: all 0.2s;
+ outline: none;
+ }
+ .search-input::placeholder {
+ color: rgba(255, 255, 255, 0.3);
+ }
+ .search-input:focus {
+ background: rgba(255, 0, 110, 0.1);
+ border-color: var(--yellow-accent);
+ box-shadow: 0 0 15px var(--yellow-accent);
+ }
+ .search-indicator {
+ position: absolute;
+ top: 50%;
+ right: 8px;
+ transform: translateY(-50%);
+ width: 5px;
+ height: 5px;
+ background: var(--green-status);
+ animation: pulse-indicator 1.5s infinite;
+ }
+ .search-results {
+ background: rgba(0, 0, 0, 0.7);
+ border: 1px solid var(--red-primary);
+ padding: 8px;
+ min-height: 25px;
+ font-size: 10px;
+ max-height: 120px;
+ overflow-y: auto;
+ }
+ .results-text {
+ display: block;
+ color: var(--text-secondary);
+ letter-spacing: 0.5px;
+ margin-bottom: 4px;
+ }
+ .results-text.found-text {
+ color: var(--green-status);
+ text-shadow: 0 0 10px var(--green-status);
+ font-weight: bold;
+ }
+ .results-text.no-results {
+ color: var(--red-primary);
+ text-shadow: 0 0 10px var(--red-primary);
+ }
+ .found-list {
+ display: flex;
+ flex-direction: column;
+ gap: 3px;
+ }
+ .found-item {
+ color: var(--text-primary);
+ text-shadow: 0 0 5px var(--red-primary);
+ font-size: 9px;
+ letter-spacing: 0.5px;
+ }

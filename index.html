@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/components/header.css" />
     <link rel="stylesheet" href="css/components/map.css" />
     <link rel="stylesheet" href="css/components/points.css" />
+    <link rel="stylesheet" href="css/components/search.css" />
     <link rel="stylesheet" href="css/components/modal.css" />
   </head>
   <body>
@@ -20,7 +21,23 @@
           <p class="project-subtitle">КАРТА СПЕЦИАЛИСТОВ</p>
         </div>
       </div>
-
+<div class="search-panel">
+ <div class="search-container">
+ <div class="search-label">ПОИСК ПО НИКУ</div>
+ <div class="search-box">
+ <input
+ type="text"
+ id="searchInput"
+ placeholder="> ВВЕДИТЕ НИКНЕЙМ..."
+ class="search-input"
+ />
+ <div class="search-indicator"></div>
+ </div>
+ <div class="search-results" id="searchResults">
+ <span class="results-text">ЖДЁМ ВВОД...</span>
+ </div>
+ </div>
+ </div>
       <div class="map-container">
         <div class="map-wrapper" id="mapWrapper">
           <img src="assets/map.png" alt="City Map" class="map-image" />
@@ -52,6 +69,7 @@
     <script src="js/core/eventBus.js"></script>
     <script src="js/modules/points.js"></script>
     <script src="js/modules/modal.js"></script>
+    <script src="js/modules/search.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
