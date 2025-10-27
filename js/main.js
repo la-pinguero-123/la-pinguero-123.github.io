@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    PointsModule.init();
-    ModalModule.init();
+  document.querySelector(".map-container").classList.add("visible");
+  PointsModule.init();
+  ModalModule.init();
 });

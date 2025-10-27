@@ -1,29 +1,29 @@
 const ModalModule = (() => {
-    const modal = document.getElementById('modal');
-    const closeBtn = document.getElementById('closeBtn');
-    const resumeFrame = document.getElementById('resumeFrame');
+  const modal = document.getElementById("modal");
+  const closeBtn = document.getElementById("closeBtn");
+  const resumeFrame = document.getElementById("resumeFrame");
 
-    const init = () => {
-        EventBus.on('point:clicked', (resume) => {
-            resumeFrame.src = resume.path;
-            modal.classList.add('active');
-        });
+  const init = () => {
+    EventBus.on("point:clicked", (resume) => {
+      resumeFrame.src = resume.path;
+      modal.classList.add("active");
+    });
 
-        const close = () => {
-            modal.classList.remove('active');
-            resumeFrame.src = '';
-        };
-
-        closeBtn.addEventListener('click', close);
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) close();
-        });
-
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && modal.classList.contains('active')) {
-                    close();
-                }
-            });
+    const close = () => {
+      modal.classList.remove("active");
+      resumeFrame.src = "";
     };
-    return { init };
+
+    closeBtn.addEventListener("click", close);
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) close();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && modal.classList.contains("active")) {
+        close();
+      }
+    });
+  };
+  return { init };
 })();
