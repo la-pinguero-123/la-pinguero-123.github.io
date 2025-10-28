@@ -1,0 +1,109 @@
+.achievement-panel {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 550;
+  background: var(--dark-panel);
+  border: 2px solid var(--red-primary);
+  padding: 12px;
+  box-shadow: 0 0 15px rgba(255, 0, 110, 0.2);
+  min-width: 200px;
+}
+
+.achievement-counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  border-bottom: 1px solid var(--red-primary);
+  padding-bottom: 8px;
+}
+
+.counter-label {
+  color: var(--yellow-accent);
+  text-shadow: 0 0 8px var(--yellow-accent);
+  font-weight: bold;
+}
+
+.counter-value {
+  color: var(--green-status);
+  text-shadow: 0 0 10px var(--green-status);
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.achievement-bar {
+  height: 8px;
+  background: rgba(255, 0, 110, 0.1);
+  border: 1px solid var(--red-primary);
+  overflow: hidden;
+}
+
+.achievement-progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--red-primary), var(--yellow-accent));
+  width: 0%;
+  transition: width 0.6s ease-out;
+  box-shadow: 0 0 10px var(--yellow-accent);
+}
+
+.notifications-container {
+  position: fixed;
+  bottom: 250px;
+  right: 20px;
+  z-index: 700;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 350px;
+}
+
+.notification {
+  background: var(--dark-panel);
+  border: 2px solid var(--red-primary);
+  padding: 15px;
+  box-shadow: 0 0 20px rgba(255, 0, 110, 0.3);
+  animation: slideIn 0.5s ease-out;
+  transition: all 0.6s ease-in;
+}
+
+.notification.success {
+  border-color: var(--yellow-accent);
+  box-shadow: 0 0 12px rgba(255, 165, 0, 0.2);
+}
+
+.notification.success .notification-icon {
+  color: var(--green-status);
+  text-shadow: 0 0 10px var(--green-status);
+}
+
+.notification.success .notification-title {
+  color: var(--green-status);
+  text-shadow: 0 0 10px var(--green-status);
+}
+
+.notification.removing {
+  animation: slideOut 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.notification-icon {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.notification-title {
+  font-size: 12px;
+  color: var(--text-primary);
+  text-shadow: 0 0 8px var(--red-primary);
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.notification-text {
+  font-size: 11px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+}

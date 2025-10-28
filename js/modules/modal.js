@@ -6,12 +6,18 @@ const ModalModule = (() => {
   const init = () => {
     EventBus.on("point:clicked", (resume) => {
       resumeFrame.src = resume.path;
+      resumeFrame.dataset.lastResume = resume.id;
       modal.classList.add("active");
     });
 
     const close = () => {
-      modal.classList.remove("active");
-      resumeFrame.src = "";
+      const contactId = resumeFrame.dataset.lastResume;
+      modal.classList.remove('active');
+      resumeFrame.src = '';
+
+      if (contactId && State.addContact(contactId)) {
+        EventBus.emit('contact:opened', contactId);
+      }
     };
 
     closeBtn.addEventListener("click", close);
