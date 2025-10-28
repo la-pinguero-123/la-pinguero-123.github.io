@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/components/points.css" />
     <link rel="stylesheet" href="css/components/search.css" />
     <link rel="stylesheet" href="css/components/modal.css" />
+    <link rel="stylesheet" href="css/components/zoom.css" />
   </head>
   <body>
     <div id="main-content">
@@ -38,6 +39,28 @@
  </div>
  </div>
  </div>
+ <div class="zoom-controls">
+<button class="zoom-btn zoom-in" id="zoomIn" title="Приблизить">
+
++
+
+</button>
+
+<div class="zoom-level" id="zoomLevel">100%</div>
+
+<button class="zoom-btn zoom-out" id="zoomOut" title="Отдалить">
+
+−
+
+</button>
+
+<button class="zoom-btn zoom-reset" id="zoomReset" title="Сбросить">
+
+⊕
+
+</button>
+
+</div>
       <div class="map-container">
         <div class="map-wrapper" id="mapWrapper">
           <img src="assets/map.png" alt="City Map" class="map-image" />
@@ -70,6 +93,7 @@
     <script src="js/modules/points.js"></script>
     <script src="js/modules/modal.js"></script>
     <script src="js/modules/search.js"></script>
+    <script src="js/modules/zoom.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
