@@ -37,9 +37,9 @@ const CONSTANTS = {
       name: "K-JUBY",
       x: 34,
       y: 54,
-      path: "resumes/person-3/index.html",
-      avatar: "resumes/person-3/avatar.jpg",
-      icon: "resumes/person-3/icon.png",
+      path: "resumes/person-4/index.html",
+      avatar: "resumes/person-4/avatar.jpg",
+      icon: "resumes/person-4/icon.png",
     },
   ],
 };
