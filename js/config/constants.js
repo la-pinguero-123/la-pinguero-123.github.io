@@ -3,7 +3,10 @@ const CONSTANTS = {
   MIN_ZOOM: 1.0,
   MAX_ZOOM: 2.5,
   ZOOM_STEP: 0.2,
+  ANIMATION_DURATION: 3000,
+  LINE_DRAW_TIME: 1500,
   STORAGE_KEY: "kontakt_opened",
+  VISIT_KEY: "kontakt_visited",
   RESUMES: [
     {
       id: "person-1",
@@ -40,6 +43,15 @@ const CONSTANTS = {
       path: "resumes/person-4/index.html",
       avatar: "resumes/person-4/avatar.jpg",
       icon: "resumes/person-4/icon.png",
+    },
+    {
+      id: "person-5",
+      name: "Alesya0711",
+      x: 64,
+      y: 64,
+      path: "resumes/person-5/index.html",
+      avatar: "resumes/person-5/avatar.jpg",
+      icon: "resumes/person-5/icon.png",
     },
   ],
 };
