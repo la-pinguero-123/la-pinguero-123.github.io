@@ -1,0 +1,287 @@
+.scanning-overlay {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 14, 39, 0.98);
+  backdrop-filter: blur(2px);
+  align-items: center;
+  justify-content: center;
+  animation: fadeInScan 0.3s ease-out;
+}
+
+.scanning-overlay.active {
+  display: flex;
+}
+
+.scanning-overlay.hidden {
+  display: none;
+}
+
+.scanning-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.scan-line.horizontal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--red-primary) 20%,
+    var(--red-primary) 50%,
+    transparent
+  );
+  box-shadow: 0 0 20px var(--red-primary), 0 0 40px rgba(255, 0, 110, 0.5);
+  animation: scanHorizontal 3s ease-in-out forwards;
+}
+
+.scan-line.vertical {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    var(--yellow-accent) 20%,
+    var(--yellow-accent) 50%,
+    transparent
+  );
+  box-shadow: 0 0 20px var(--yellow-accent), 0 0 40px rgba(255, 165, 0, 0.5);
+  animation: scanVertical 3s ease-in-out forwards;
+}
+
+.scanning-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+}
+
+.glitch-text {
+  font-size: 28px;
+  color: var(--text-primary);
+  text-shadow: 0 0 20px var(--red-primary);
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-family: "Courier New", monospace;
+  animation: glitchScan 0.6s ease-in-out infinite;
+  position: relative;
+  display: inline-block;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+
+.glitch-text::before {
+  animation: glitchScanBefore 0.3s ease infinite;
+  color: var(--red-primary);
+  z-index: -1;
+}
+
+.glitch-text::after {
+  animation: glitchScanAfter 0.3s ease infinite;
+  color: var(--yellow-accent);
+  z-index: -2;
+}
+
+.scan-dots {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+}
+
+.scan-dot {
+  width: 12px;
+  height: 12px;
+  background: var(--red-primary);
+  box-shadow: 0 0 10px var(--red-primary);
+  animation: scanDotPulse 0.6s ease-in-out infinite;
+}
+
+.scan-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.scan-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.tutorial-modal {
+  display: none;
+  position: fixed;
+  z-index: 3000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+}
+
+.tutorial-modal.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tutorial-content {
+  position: relative;
+  width: 90%;
+  max-width: 700px;
+  background: var(--dark-panel);
+  border: 3px solid var(--red-primary);
+  padding: 40px;
+  box-shadow: 0 0 40px rgba(255, 0, 110, 0.4);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.tutorial-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 32px;
+  color: var(--red-primary);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tutorial-close:hover {
+  color: var(--yellow-accent);
+  text-shadow: 0 0 10px var(--yellow-accent);
+}
+
+.tutorial-title {
+  font-size: 22px;
+  color: var(--text-primary);
+  text-shadow: 0 0 10px var(--red-primary);
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  border-bottom: 2px solid var(--red-primary);
+  padding-bottom: 15px;
+}
+
+.tutorial-text {
+  margin-bottom: 30px;
+}
+
+.tutorial-section {
+  margin-bottom: 20px;
+}
+
+.tutorial-section h3 {
+  font-size: 13px;
+  color: var(--yellow-accent);
+  text-shadow: 0 0 8px var(--yellow-accent);
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.tutorial-section p,
+.tutorial-section li {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+}
+
+.tutorial-section ul {
+  list-style: none;
+  padding-left: 10px;
+}
+
+.tutorial-section li {
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.tutorial-section li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--green-status);
+}
+
+.highlight {
+  color: var(--yellow-accent);
+  text-shadow: 0 0 10px var(--yellow-accent);
+  font-weight: bold;
+}
+
+.tutorial-footer {
+  padding: 15px;
+  background: rgba(255, 0, 110, 0.08);
+  border: 1px solid var(--red-primary);
+  margin-bottom: 20px;
+  font-size: 11px;
+  color: var(--text-secondary);
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.tutorial-start {
+  width: 100%;
+  padding: 15px;
+  background: rgba(255, 0, 110, 0.2);
+  border: 2px solid var(--red-primary);
+  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: "Courier New", monospace;
+  text-shadow: 0 0 8px var(--red-primary);
+}
+
+.tutorial-start:hover {
+  background: rgba(255, 165, 0, 0.2);
+  border-color: var(--yellow-accent);
+  color: var(--yellow-accent);
+  text-shadow: 0 0 10px var(--yellow-accent);
+  box-shadow: 0 0 20px var(--yellow-accent);
+}
+
+.tutorial-start:active {
+  transform: scale(0.98);
+}
+
+.tutorial-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.tutorial-content::-webkit-scrollbar-track {
+  background: rgba(255, 0, 110, 0.05);
+}
+
+.tutorial-content::-webkit-scrollbar-thumb {
+  background: var(--red-primary);
+}

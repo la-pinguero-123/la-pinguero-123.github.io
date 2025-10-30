@@ -21,5 +21,9 @@ body {
 #main-content {
   width: 100%;
   height: 100%;
+  display: none;
+}
+
+#main-content.visible {
   display: block;
 }

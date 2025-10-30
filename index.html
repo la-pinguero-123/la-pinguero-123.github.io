@@ -15,9 +15,27 @@
   <link rel="stylesheet" href="css/components/modal.css" />
   <link rel="stylesheet" href="css/components/notifications.css" />
   <link rel="stylesheet" href="css/components/zoom.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/components/tutorial.css" />
 </head>
 
 <body>
+  <div class="scanning-overlay" id="scanningOverlay">
+    <div class="scanning-container">
+      <div class="scan-line horizontal" id="scanLineH"></div>
+      <div class="scan-line vertical" id="scanLineV"></div>
+      <div class="scanning-text">
+        <span class="glitch-text" data-text="СИСТЕМА ИНИЦИАЛИЗИРУЕТСЯ">
+          СИСТЕМА ИНИЦИАЛИЗИРУЕТСЯ
+        </span>
+      </div>
+      <div class="scan-dots">
+        <span class="scan-dot"></span>
+        <span class="scan-dot"></span>
+        <span class="scan-dot"></span>
+      </div>
+    </div>
+  </div>
   <div id="main-content">
     <div class="header-panel">
       <div class="project-title">
@@ -95,6 +113,37 @@
 
     <div class="notifications-container" id="notificationsContainer"></div>
   </div>
+   <div class="tutorial-modal" id="tutorialModal">
+        <div class="tutorial-content">
+          <button class="tutorial-close" id="tutorialClose">×</button>
+          <h2 class="tutorial-title">⬢ ДОБРО ПОЖАЛОВАТЬ</h2>
+          <div class="tutorial-text">
+            <div class="tutorial-section">
+              <h3>🎯 ЧТО ЭТО:</h3>
+              <p>
+                КОНТАКТ — карта восьми специалистов. Нажимайте на точки и
+                открывайте профили.
+              </p>
+            </div>
+            <div class="tutorial-section">
+              <h3>🔍 КАК ПОЛЬЗОВАТЬСЯ:</h3>
+              <ul>
+                <li>
+                  Нажимайте на
+                  <span class="highlight">светящиеся квадраты</span>
+                </li>
+                <li>Или используйте <span class="highlight">поиск</span></li>
+                <li>Открывайте профили и изучайте опыт</li>
+                <li>Соберите всех 8 специалистов</li>
+              </ul>
+            </div>
+            <div class="tutorial-footer">
+              <p>Каждый открытый профиль запоминается системой.</p>
+            </div>
+          </div>
+          <button class="tutorial-start" id="tutorialStart">НАЧАТЬ</button>
+        </div>
+      </div>
 
   <script src="js/config/constants.js"></script>
   <script src="js/core/state.js"></script>
@@ -106,6 +155,7 @@
   <script src="js/modules/zoom.js"></script>
   <script src="js/modules/achievements.js"></script>
   <script src="js/modules/network.js"></script>
+  <script src="js/modules/tutorial.js"></script>
   <script src="js/main.js"></script>
 </body>
 

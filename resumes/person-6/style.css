@@ -1,0 +1,309 @@
+:root {
+  --pink: #ff0073;
+  --violet: #a600ff;
+  --red: #ff0000;
+  --purple: #ff14e9;
+  --orange: #ff8b14;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Courier New", monospace;
+  padding: 40px;
+  position: relative;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  filter: brightness(0.3) contrast(2.0);
+  z-index: -1;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 0, 110, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+ background: linear-gradient(180deg, var(--pink), #ff3333, #cc0000);
+}
+
+.Ancilot-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.Ancilot-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.Ancilot-title {
+  font-size: 56px;
+  color: var(--red);
+  text-shadow: 0 0 20px var(--red), 0 0 40px var(--red),
+    0 0 60px var(--red);
+  letter-spacing: 8px;
+  font-weight: bold;
+  animation: Ancilot-flicker 2s infinite, color-shift 3s infinite alternate;
+}
+
+.Ancilot-line {
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--red),
+    var(--violet),
+    var(--red),
+    transparent
+  );
+  margin-top: 20px;
+  box-shadow: 0 0 15px var(--pink);
+}
+
+.Ancilot-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.Ancilot-card {
+  border: 2px solid;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.7);
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+}
+
+.Ancilot-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+  animation: rotate-glow 4s linear infinite;
+}
+
+.Ancilot-card h3 {
+  position: relative;
+  z-index: 1;
+  font-size: 15px;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  text-shadow: 0 0 10px currentColor;
+  background: linear-gradient(90deg, currentColor, #fff, currentColor);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s infinite linear;
+  overflow: hidden;
+}
+
+.Ancilot-card h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, currentColor, transparent);
+  transform: translateX(-100%);
+  animation: slide-in 3s infinite;
+}
+
+.Ancilot-card p {
+  position: relative;
+  z-index: 1;
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.9;
+  background: linear-gradient(90deg, currentColor, #fff, currentColor);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s infinite linear;
+}
+
+.card-IDENTITY {
+  border-color: var(--violet);
+  color: var(--violet);
+  grid-column: 1 / 4;
+  grid-row: 1;
+}
+
+.card-IDENTITY::before {
+  width: 300%;
+  height: 300%;
+  top: -100%;
+  left: -100%;
+}
+
+.Ancilot-card:hover {
+  box-shadow: 0 0 30px currentColor;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.card-SKILLS {
+  border-color: var(--pink);
+  color:var(--pink);
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.card-LABORATORY {
+  border-color: var(--red);
+  color: var(--red);
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.card-EDUCATION {
+  border-color: var(--purple);
+  color: var(--purple);
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.card-CONTACT {
+  border-color: var(--orange);
+  color: var(--orange);
+  grid-column: 1 / 4;
+  grid-row: 3;
+}
+
+.card-CONTACT::before {
+  width: 300%;
+  height: 300%;
+  top: -100%;
+  left: -100%;
+}
+
+.Ancilot-footer {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 2px dashed var(--violet);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.Ancilot-pulse {
+  width: 20px;
+  height: 20px;
+  background: #00ff00;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #00ff00;
+  animation: pulse-glow 1.5s ease-in-out infinite;
+}
+
+.Ancilot-status {
+  font-size: 11px;
+  color: #00ff00;
+  text-shadow: 0 0 10px #00ff00;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #00ff00, #fff, #00ff00);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 2s infinite linear;
+}
+
+@keyframes Ancilot-flicker {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  55% {
+    opacity: 1;
+  }
+  57% {
+    opacity: 0.95;
+  }
+}
+
+@keyframes color-shift {
+  0% {
+    color: var(--red);
+    text-shadow: 0 0 20px var(--red), 0 0 40px var(--red), 0 0 60px var(--red);
+  }
+  100% {
+    color: var(--violet);
+    text-shadow: 0 0 20px var(--violet), 0 0 40px var(--violet), 0 0 60px var(--violet);
+  }
+}
+
+@keyframes rotate-glow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.7;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

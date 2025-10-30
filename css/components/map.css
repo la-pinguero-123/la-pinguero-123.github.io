@@ -112,9 +112,3 @@
     filter: drop-shadow(0 0 15px #ffa500) drop-shadow(0 0 10px #ff3333);
   }
 }
-
-@keyframes drawLine {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
