@@ -1,0 +1,298 @@
+:root {
+  --Werctus-gold: #ffb300;
+  --Werctus-grey: #30d5c8;
+  --dark: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--dark);
+  color: var(--primary);
+  font-family: "Courier New", monospace;
+  min-height: 100vh;
+  overflow-x: hidden;
+  border: 2px solid var(--primary);
+  box-shadow: inset 0 0 20px rgba(218, 165, 32, 0.8),
+    0 0 30px rgba(218, 165, 32, 0.8);
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 20px),
+    calc(100% - 20px) 100%,
+    0 100%
+  );
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.85),
+      rgba(0, 0, 0, 0.85)
+    ),
+    url("https://images.stopgame.ru/news/2016/05/16/B6MPKDhQ.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 0, 110, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--Werctus-grey);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--Werctus-gold);
+}
+
+.Werctus-layout {
+  display: grid;
+  grid-template-columns: 1fr 300px 1fr;
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: calc(100vh - 40px);
+  align-items: start;
+}
+
+.Werctus-left,
+.Werctus-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.Werctus-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+  min-height: 400px;
+  margin: 20px 0;
+}
+
+
+@keyframes Werctus-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Стили для кнопок, если они у вас есть */
+.Werctus-button {
+  background: rgba(255, 0, 110, 0.1);
+  border: 2px solid var(--Werctus-gold);
+  color: var(--Werctus-gold);
+  padding: 12px 24px;
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s;
+  /* Отступы для кнопок */
+  margin: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.Werctus-button:hover {
+  background: rgba(255, 0, 110, 0.2);
+  box-shadow: 0 0 20px var(--Werctus-gold);
+  transform: translateY(-2px);
+}
+
+/* Контейнер для групп кнопок */
+.Werctus-buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+  margin: 15px 0;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  body {
+    padding: 15px;
+    overflow-y: auto; /* Разрешаем скролл на мобильных */
+  }
+  
+  .Werctus-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .Werctus-center {
+    grid-row: 1;
+    margin-bottom: 20px;
+  }
+  
+  .Werctus-section {
+    margin: 8px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  
+  .Werctus-layout {
+    gap: 15px;
+  }
+  
+  .Werctus-section {
+    margin: 5px 0;
+    padding: 15px;
+  }
+  
+  .Werctus-center {
+    padding: 40px 15px;
+    margin: 15px 0;
+  }
+}
+
+/* Существующие стили deus-ex-border остаются без изменений */
+.deus-ex-border {
+    position: relative;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffb300;
+    font-family: 'Courier New', sans-serif;
+    margin: 15px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.deus-ex-border:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 10px 25px rgba(255, 179, 0, 0.3),
+        0 0 30px rgba(255, 179, 0, 0.2);
+}
+
+/* Остальные стили deus-ex-border без изменений */
+.deus-ex-border::before {
+    content: '';
+    position: absolute;
+    padding: 5px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid #ffb300;
+    clip-path: polygon(
+        15px 0%, 
+        calc(100% - 15px) 0%, 
+        100% 15px, 
+        100% calc(100% - 15px), 
+        calc(100% - 15px) 100%, 
+        15px 100%, 
+        0% calc(100% - 15px), 
+        0% 15px
+    );
+}
+
+.deus-ex-border::after {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    border: 1px solid #ffb300;
+    clip-path: polygon(
+        12px 0%, 
+        calc(100% - 12px) 0%, 
+        100% 12px, 
+        100% calc(100% - 12px), 
+        calc(100% - 12px) 100%, 
+        12px 100%, 
+        0% calc(100% - 12px), 
+        0% 12px
+    );
+    opacity: 0.6;
+}
+
+.corner-tl, .corner-tr, .corner-bl, .corner-br {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ffb300;
+}
+
+.corner-tl {
+    top: -2px;
+    left: -2px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.corner-tr {
+    top: -2px;
+    right: -2px;
+    border-left: none;
+    border-bottom: none;
+}
+
+.corner-bl {
+    bottom: -2px;
+    left: -2px;
+    border-right: none;
+    border-top: none;
+}
+
+.corner-br {
+    bottom: -2px;
+    right: -2px;
+    border-left: none;
+    border-top: none;
+}
+
+.datalink-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  margin-bottom: 1.5em;
+  padding: 10px;
+  background: rgba(255, 179, 0, 0.05);
+  border-left: 2px solid #30d5c8;
+}
+
+.datalink-item strong {
+  white-space: nowrap;
+  color: #30d5c8;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 5px #30d5c8;
+}
+
+.datalink-item a {
+  word-break: break-all;
+  color: #30d5c8;
+  text-decoration: none;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  padding: 5px;
+}
+
+.datalink-item a:hover {
+  text-shadow: 0 0 10px #30d5c8;
+  background: rgba(255, 179, 0, 0.1);
+  transform: translateX(5px);
+}

@@ -79,6 +79,7 @@
 #networkSVG.network-complete line {
   stroke-dasharray: none !important;
   stroke-dashoffset: 0 !important;
+  animation: network-glow-pulse 1.5s ease-in-out infinite;
 }
 
 #networkSVG.network-complete .data-packet {
