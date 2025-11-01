@@ -48,7 +48,7 @@ const CONSTANTS = {
       id: "person-5",
       name: "Alesya0711",
       x: 60,
-      y: 83,
+      y: 71,
       path: "resumes/person-5/index.html",
       avatar: "resumes/person-5/avatar.jpg",
       icon: "resumes/person-5/icon.png",
