@@ -1,8 +1,8 @@
 :root {
-  --primary: #00ffff; 
-  --secondary: #f33a99; 
+  --primary: #00ffff;
+  --secondary: #f33a99;
   --dark: #0a0e27;
-  --yellow-accent: #ffee00; 
+  --yellow-accent: #ffee00;
 }
 
 * {
@@ -17,7 +17,7 @@ body {
   color: var(--primary);
   font-family: "Courier New", monospace;
   height: 100vh;
-  overflow: hidden; 
+  overflow: hidden;
   border: 2px solid var(--primary);
   box-shadow: inset 0 0 20px rgba(0, 255, 255, 0.3),
     0 0 30px rgba(0, 255, 255, 0.3);
@@ -50,12 +50,12 @@ body {
 .main-container {
   width: 100%;
   height: 100%;
-  max-width: 1200px; 
-  margin: 0 auto; 
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  overflow-y: auto; 
-  padding: 20px 40px; 
+  overflow-y: auto;
+  padding: 20px 40px;
 }
 .profile-header,
 .profile-footer {
@@ -79,7 +79,7 @@ body {
   text-align: center;
   border-top: 1px solid var(--yellow-accent);
   border-bottom: none;
-  margin-top: auto; 
+  margin-top: auto;
 }
 
 .status-online {
@@ -103,7 +103,7 @@ body {
 
 .layout-grid {
   display: grid;
-  grid-template-columns: 1fr 2fr; 
+  grid-template-columns: 1fr 2fr;
   gap: 30px;
   flex-grow: 1;
   padding: 0 10px;
@@ -174,7 +174,7 @@ a:hover {
     clip-path: none;
   }
   .main-container {
-      padding: 15px;
+    padding: 15px;
   }
   .layout-grid {
     grid-template-columns: 1fr;
@@ -267,11 +267,11 @@ h1:after {
   display: flex;
   align-items: baseline;
   flex-wrap: wrap;
-  gap: 0.5em; 
+  gap: 0.5em;
 }
 
 .datalink-item strong {
-  white-space: nowrap; 
+  white-space: nowrap;
 }
 
 .datalink-item a {

@@ -1,117 +1,116 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>КОНТАКТ — Карта специалистов</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>КОНТАКТ — Карта специалистов</title>
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components/header.css" />
+    <link rel="stylesheet" href="css/components/map.css" />
+    <link rel="stylesheet" href="css/components/points.css" />
+    <link rel="stylesheet" href="css/components/search.css" />
+    <link rel="stylesheet" href="css/components/modal.css" />
+    <link rel="stylesheet" href="css/components/notifications.css" />
+    <link rel="stylesheet" href="css/components/zoom.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/components/tutorial.css" />
+  </head>
 
-  <link rel="stylesheet" href="css/variables.css" />
-  <link rel="stylesheet" href="css/base.css" />
-  <link rel="stylesheet" href="css/components/header.css" />
-  <link rel="stylesheet" href="css/components/map.css" />
-  <link rel="stylesheet" href="css/components/points.css" />
-  <link rel="stylesheet" href="css/components/search.css" />
-  <link rel="stylesheet" href="css/components/modal.css" />
-  <link rel="stylesheet" href="css/components/notifications.css" />
-  <link rel="stylesheet" href="css/components/zoom.css" />
-  <link rel="stylesheet" href="css/animations.css" />
-  <link rel="stylesheet" href="css/components/tutorial.css" />
-</head>
-
-<body>
-  <div class="scanning-overlay" id="scanningOverlay">
-    <div class="scanning-container">
-      <div class="scan-line horizontal" id="scanLineH"></div>
-      <div class="scan-line vertical" id="scanLineV"></div>
-      <div class="scanning-text">
-        <span class="glitch-text" data-text="СИСТЕМА ИНИЦИАЛИЗИРУЕТСЯ">
-          СИСТЕМА ИНИЦИАЛИЗИРУЕТСЯ
-        </span>
-      </div>
-      <div class="scan-dots">
-        <span class="scan-dot"></span>
-        <span class="scan-dot"></span>
-        <span class="scan-dot"></span>
+  <body>
+    <div class="scanning-overlay" id="scanningOverlay">
+      <div class="scanning-container">
+        <div class="scan-line horizontal" id="scanLineH"></div>
+        <div class="scan-line vertical" id="scanLineV"></div>
+        <div class="scanning-text">
+          <span class="glitch-text" data-text="СИСТЕМА ИНИЦИАЛИЗИРУЕТСЯ">
+            СИСТЕМА ИНИЦИАЛИЗИРУЕТСЯ
+          </span>
+        </div>
+        <div class="scan-dots">
+          <span class="scan-dot"></span>
+          <span class="scan-dot"></span>
+          <span class="scan-dot"></span>
+        </div>
       </div>
     </div>
-  </div>
-  <div id="main-content">
-<div class="header-panel">
-  <div class="project-title">
-    <h1>⬢ КОНТАКТ</h1>
-    <p class="project-subtitle">КАРТА СПЕЦИАЛИСТОВ</p>
-  </div>
-  <button class="info-btn" id="infoBtn">
-    <span class="info-icon">ⓘ</span>
-    <span class="info-label">ЧТО ЗДЕСЬ</span>
-  </button>
-  <div class="info-modal" id="infoModal">
-    <div class="info-modal-content">
-      <button class="info-close" id="infoClose">&times;</button>
-      <h2 class="info-modal-title">КОНТАКТ — КАРТА СПЕЦИАЛИСТОВ</h2>
-      <div class="info-modal-text">
-        <p>
-          Визуальная сеть профессионалов вашего города. Каждая светящаяся
-          точка на карте — реальный человек с опытом, портфолио и
-          историей.
-        </p>
-        <p>
-          Нажимайте на точки, чтобы открыть полные резюме. Используйте
-          поиск для быстрого поиска по нику.
-        </p>
-        <div class="info-modal-stats">
-          <div class="stat">
-            <span class="stat-label">СПЕЦИАЛИСТОВ НА КАРТЕ:</span>
-            <span class="stat-num">8</span>
+    <div id="main-content">
+      <div class="header-panel">
+        <div class="project-title">
+          <h1>⬢ КОНТАКТ</h1>
+          <p class="project-subtitle">КАРТА СПЕЦИАЛИСТОВ</p>
+        </div>
+        <button class="info-btn" id="infoBtn">
+          <span class="info-icon">ⓘ</span>
+          <span class="info-label">ЧТО ЗДЕСЬ</span>
+        </button>
+        <div class="info-modal" id="infoModal">
+          <div class="info-modal-content">
+            <button class="info-close" id="infoClose">&times;</button>
+            <h2 class="info-modal-title">КОНТАКТ — КАРТА СПЕЦИАЛИСТОВ</h2>
+            <div class="info-modal-text">
+              <p>
+                Визуальная сеть профессионалов вашего города. Каждая светящаяся
+                точка на карте — реальный человек с опытом, портфолио и
+                историей.
+              </p>
+              <p>
+                Нажимайте на точки, чтобы открыть полные резюме. Используйте
+                поиск для быстрого поиска по нику.
+              </p>
+              <div class="info-modal-stats">
+                <div class="stat">
+                  <span class="stat-label">СПЕЦИАЛИСТОВ НА КАРТЕ:</span>
+                  <span class="stat-num">9</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-label">ВЕРСИЯ:</span>
+                  <span class="stat-num">1.0.0</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="stat">
-            <span class="stat-label">ВЕРСИЯ:</span>
-            <span class="stat-num">2.0</span>
+        </div>
+      </div>
+      <div class="search-panel">
+        <div class="search-container">
+          <div class="search-label">ПОИСК ПО НИКУ</div>
+          <div class="search-box">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="> ВВЕДИТЕ НИКНЕЙМ..."
+              class="search-input"
+            />
+            <div class="search-indicator"></div>
+          </div>
+          <div class="search-results" id="searchResults">
+            <span class="results-text">ЖДЁМ ВВОД...</span>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
-    <div class="search-panel">
-      <div class="search-container">
-        <div class="search-label">ПОИСК ПО НИКУ</div>
-        <div class="search-box">
-          <input type="text" id="searchInput" placeholder="> ВВЕДИТЕ НИКНЕЙМ..." class="search-input" />
-          <div class="search-indicator"></div>
-        </div>
-        <div class="search-results" id="searchResults">
-          <span class="results-text">ЖДЁМ ВВОД...</span>
-        </div>
+      <div class="zoom-controls">
+        <button class="zoom-btn zoom-in" id="zoomIn" title="Приблизить">
+          +
+        </button>
+
+        <div class="zoom-level" id="zoomLevel">100%</div>
+
+        <button class="zoom-btn zoom-out" id="zoomOut" title="Отдалить">
+          −
+        </button>
+
+        <button class="zoom-btn zoom-reset" id="zoomReset" title="Сбросить">
+          ⊕
+        </button>
       </div>
-    </div>
-    <div class="zoom-controls">
-      <button class="zoom-btn zoom-in" id="zoomIn" title="Приблизить">
-
-        +
-
-      </button>
-
-      <div class="zoom-level" id="zoomLevel">100%</div>
-
-      <button class="zoom-btn zoom-out" id="zoomOut" title="Отдалить">
-
-        −
-
-      </button>
-
-      <button class="zoom-btn zoom-reset" id="zoomReset" title="Сбросить">
-
-        ⊕
-
-      </button>
-
-    </div>
-    <div class="map-container">
-      <div class="map-wrapper" id="mapWrapper">
-        <img src="assets/map.jpg" alt="City Map" class="map-image" />
-        <svg id="networkSVG" style="
+      <div class="map-container">
+        <div class="map-wrapper" id="mapWrapper">
+          <img src="assets/map.jpg" alt="City Map" class="map-image" />
+          <svg
+            id="networkSVG"
+            style="
               position: absolute;
               top: 0;
               left: 0;
@@ -120,74 +119,76 @@
               pointer-events: none;
               z-index: 20;
             "
-	></svg>
-        <div class="points-container" id="pointsContainer"></div>
-      </div>
-    </div>
-
-    <div class="modal" id="modal">
-      <div class="modal-content">
-        <button class="close-btn" id="closeBtn">&times;</button>
-        <iframe id="resumeFrame"></iframe>
-      </div>
-    </div>
-
-    <div class="achievement-panel" id="achievementPanel">
-      <div class="achievement-counter">
-        <span class="counter-label">ОТКРЫТО:</span>
-        <span class="counter-value"><span id="contactsOpened">0</span>/8</span>
-      </div>
-      <div class="achievement-bar">
-        <div class="achievement-progress" id="achievementProgress"></div>
-      </div>
-    </div>
-
-    <div class="notifications-container" id="notificationsContainer"></div>
-  </div>
-   <div class="tutorial-modal" id="tutorialModal">
-        <div class="tutorial-content">
-          <button class="tutorial-close" id="tutorialClose">×</button>
-          <h2 class="tutorial-title">⬢ ДОБРО ПОЖАЛОВАТЬ</h2>
-          <div class="tutorial-text">
-            <div class="tutorial-section">
-              <h3>🎯 ЧТО ЭТО:</h3>
-              <p>
-                КОНТАКТ — карта восьми специалистов. Нажимайте на точки и
-                открывайте профили.
-              </p>
-            </div>
-            <div class="tutorial-section">
-              <h3>🔍 КАК ПОЛЬЗОВАТЬСЯ:</h3>
-              <ul>
-                <li>
-                  Нажимайте на
-                  <span class="highlight">светящиеся квадраты</span>
-                </li>
-                <li>Или используйте <span class="highlight">поиск</span></li>
-                <li>Открывайте профили и изучайте опыт</li>
-                <li>Соберите всех 8 специалистов</li>
-              </ul>
-            </div>
-            <div class="tutorial-footer">
-              <p>Каждый открытый профиль запоминается системой.</p>
-            </div>
-          </div>
-          <button class="tutorial-start" id="tutorialStart">НАЧАТЬ</button>
+          ></svg>
+          <div class="points-container" id="pointsContainer"></div>
         </div>
       </div>
 
-  <script src="js/config/constants.js"></script>
-  <script src="js/core/state.js"></script>
-  <script src="js/core/eventBus.js"></script>
-  <script src="js/modules/notifications.js"></script>
-  <script src="js/modules/ui.js"></script>
-  <script src="js/modules/zoom.js"></script>
-  <script src="js/modules/search.js"></script>
-  <script src="js/modules/points.js"></script>
-  <script src="js/modules/modal.js"></script>
-  <script src="js/modules/network.js"></script>
-  <script src="js/modules/achievements.js"></script>
-  <script src="js/modules/tutorial.js"></script>
-  <script src="js/main.js"></script>
+      <div class="modal" id="modal">
+        <div class="modal-content">
+          <button class="close-btn" id="closeBtn">&times;</button>
+          <iframe id="resumeFrame"></iframe>
+        </div>
+      </div>
+
+      <div class="achievement-panel" id="achievementPanel">
+        <div class="achievement-counter">
+          <span class="counter-label">ОТКРЫТО:</span>
+          <span class="counter-value"
+            ><span id="contactsOpened">0</span>/9</span
+          >
+        </div>
+        <div class="achievement-bar">
+          <div class="achievement-progress" id="achievementProgress"></div>
+        </div>
+      </div>
+
+      <div class="notifications-container" id="notificationsContainer"></div>
+    </div>
+    <div class="tutorial-modal" id="tutorialModal">
+      <div class="tutorial-content">
+        <button class="tutorial-close" id="tutorialClose">×</button>
+        <h2 class="tutorial-title">⬢ ДОБРО ПОЖАЛОВАТЬ</h2>
+        <div class="tutorial-text">
+          <div class="tutorial-section">
+            <h3>🎯 ЧТО ЭТО:</h3>
+            <p>
+              КОНТАКТ — карта восьми специалистов. Нажимайте на точки и
+              открывайте профили.
+            </p>
+          </div>
+          <div class="tutorial-section">
+            <h3>🔍 КАК ПОЛЬЗОВАТЬСЯ:</h3>
+            <ul>
+              <li>
+                Нажимайте на
+                <span class="highlight">светящиеся квадраты</span>
+              </li>
+              <li>Или используйте <span class="highlight">поиск</span></li>
+              <li>Открывайте профили и изучайте опыт</li>
+              <li>Соберите всех 9 специалистов</li>
+            </ul>
+          </div>
+          <div class="tutorial-footer">
+            <p>Каждый открытый профиль запоминается системой.</p>
+          </div>
+        </div>
+        <button class="tutorial-start" id="tutorialStart">НАЧАТЬ</button>
+      </div>
+    </div>
+
+    <script src="js/config/constants.js"></script>
+    <script src="js/core/state.js"></script>
+    <script src="js/core/eventBus.js"></script>
+    <script src="js/modules/notifications.js"></script>
+    <script src="js/modules/ui.js"></script>
+    <script src="js/modules/zoom.js"></script>
+    <script src="js/modules/search.js"></script>
+    <script src="js/modules/points.js"></script>
+    <script src="js/modules/modal.js"></script>
+    <script src="js/modules/network.js"></script>
+    <script src="js/modules/achievements.js"></script>
+    <script src="js/modules/tutorial.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

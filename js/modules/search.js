@@ -38,8 +38,9 @@ const SearchModule = (() => {
         </div>
       `;
     } else {
-      resCont.innerHTML = '<span class="results-text no-results">✗ НЕ НАЙДЕНО</span>';
+      resCont.innerHTML =
+        '<span class="results-text no-results">✗ НЕ НАЙДЕНО</span>';
     }
   };
   return { init };
- })();
+})();

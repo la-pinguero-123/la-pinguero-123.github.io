@@ -6,7 +6,7 @@ const ZoomModule = (() => {
     zoomReset: document.getElementById("zoomReset"),
     zoomLevel: document.getElementById("zoomLevel"),
   };
-  
+
   let zoom = 1;
   let offsetX = 0;
   let offsetY = 0;

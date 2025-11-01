@@ -12,11 +12,11 @@ const ModalModule = (() => {
 
     const close = () => {
       const contactId = resumeFrame.dataset.lastResume;
-      modal.classList.remove('active');
-      resumeFrame.src = '';
+      modal.classList.remove("active");
+      resumeFrame.src = "";
 
       if (contactId && State.addContact(contactId)) {
-        EventBus.emit('contact:opened', contactId);
+        EventBus.emit("contact:opened", contactId);
       }
     };
 

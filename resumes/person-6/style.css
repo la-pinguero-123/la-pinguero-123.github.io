@@ -25,12 +25,12 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('1.jpg');
+  background-image: url("1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  filter: brightness(0.3) contrast(2.0);
+  filter: brightness(0.3) contrast(2);
   z-index: -1;
 }
 
@@ -43,7 +43,7 @@ body::before {
 }
 
 ::-webkit-scrollbar-thumb {
- background: linear-gradient(180deg, var(--pink), #ff3333, #cc0000);
+  background: linear-gradient(180deg, var(--pink), #ff3333, #cc0000);
 }
 
 .Ancilot-container {
@@ -61,8 +61,7 @@ body::before {
 .Ancilot-title {
   font-size: 56px;
   color: var(--red);
-  text-shadow: 0 0 20px var(--red), 0 0 40px var(--red),
-    0 0 60px var(--red);
+  text-shadow: 0 0 20px var(--red), 0 0 40px var(--red), 0 0 60px var(--red);
   letter-spacing: 8px;
   font-weight: bold;
   animation: Ancilot-flicker 2s infinite, color-shift 3s infinite alternate;
@@ -93,7 +92,7 @@ body::before {
 .Ancilot-card {
   border: 2px solid;
   padding: 30px;
-  background: rgba(0, 0, 0, 0.3); 
+  background: rgba(0, 0, 0, 0.3);
   transition: all 0.3s;
   position: relative;
   overflow: hidden;
@@ -156,7 +155,7 @@ body::before {
 
 .card-SKILLS {
   border-color: var(--pink);
-  color:var(--pink);
+  color: var(--pink);
   grid-column: 2;
   grid-row: 2;
 }
@@ -237,7 +236,8 @@ body::before {
   }
   100% {
     color: var(--violet);
-    text-shadow: 0 0 20px var(--violet), 0 0 40px var(--violet), 0 0 60px var(--violet);
+    text-shadow: 0 0 20px var(--violet), 0 0 40px var(--violet),
+      0 0 60px var(--violet);
   }
 }
 

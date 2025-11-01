@@ -26,10 +26,7 @@ body {
     calc(100% - 20px) 100%,
     0 100%
   );
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0.85),
-      rgba(0, 0, 0, 0.85)
-    ),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
     url("https://images.stopgame.ru/news/2016/05/16/B6MPKDhQ.jpg");
   background-size: cover;
   background-position: center;
@@ -69,7 +66,6 @@ body {
   gap: 20px;
 }
 
-
 .Werctus-center {
   display: flex;
   flex-direction: column;
@@ -80,7 +76,6 @@ body {
   min-height: 400px;
   margin: 20px 0;
 }
-
 
 @keyframes Werctus-rotate {
   from {
@@ -130,7 +125,7 @@ body {
     padding: 15px;
     overflow-y: auto; /* Разрешаем скролл на мобильных */
   }
-  
+
   .Werctus-layout {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -140,7 +135,7 @@ body {
     grid-row: 1;
     margin-bottom: 20px;
   }
-  
+
   .Werctus-section {
     margin: 8px 0;
   }
@@ -150,16 +145,16 @@ body {
   body {
     padding: 10px;
   }
-  
+
   .Werctus-layout {
     gap: 15px;
   }
-  
+
   .Werctus-section {
     margin: 5px 0;
     padding: 15px;
   }
-  
+
   .Werctus-center {
     padding: 40px 15px;
     margin: 15px 0;
@@ -168,99 +163,101 @@ body {
 
 /* Существующие стили deus-ex-border остаются без изменений */
 .deus-ex-border {
-    position: relative;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.7);
-    color: #ffb300;
-    font-family: 'Courier New', sans-serif;
-    margin: 15px;
-    transition: all 0.4s ease;
-    cursor: pointer;
+  position: relative;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffb300;
+  font-family: "Courier New", sans-serif;
+  margin: 15px;
+  transition: all 0.4s ease;
+  cursor: pointer;
 }
 
 .deus-ex-border:hover {
-    transform: translateY(-5px);
-    box-shadow: 
-        0 10px 25px rgba(255, 179, 0, 0.3),
-        0 0 30px rgba(255, 179, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(255, 179, 0, 0.3),
+    0 0 30px rgba(255, 179, 0, 0.2);
 }
 
 /* Остальные стили deus-ex-border без изменений */
 .deus-ex-border::before {
-    content: '';
-    position: absolute;
-    padding: 5px;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: 2px solid #ffb300;
-    clip-path: polygon(
-        15px 0%, 
-        calc(100% - 15px) 0%, 
-        100% 15px, 
-        100% calc(100% - 15px), 
-        calc(100% - 15px) 100%, 
-        15px 100%, 
-        0% calc(100% - 15px), 
-        0% 15px
-    );
+  content: "";
+  position: absolute;
+  padding: 5px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #ffb300;
+  clip-path: polygon(
+    15px 0%,
+    calc(100% - 15px) 0%,
+    100% 15px,
+    100% calc(100% - 15px),
+    calc(100% - 15px) 100%,
+    15px 100%,
+    0% calc(100% - 15px),
+    0% 15px
+  );
 }
 
 .deus-ex-border::after {
-    content: '';
-    position: absolute;
-    top: 6px;
-    left: 6px;
-    right: 6px;
-    bottom: 6px;
-    border: 1px solid #ffb300;
-    clip-path: polygon(
-        12px 0%, 
-        calc(100% - 12px) 0%, 
-        100% 12px, 
-        100% calc(100% - 12px), 
-        calc(100% - 12px) 100%, 
-        12px 100%, 
-        0% calc(100% - 12px), 
-        0% 12px
-    );
-    opacity: 0.6;
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  border: 1px solid #ffb300;
+  clip-path: polygon(
+    12px 0%,
+    calc(100% - 12px) 0%,
+    100% 12px,
+    100% calc(100% - 12px),
+    calc(100% - 12px) 100%,
+    12px 100%,
+    0% calc(100% - 12px),
+    0% 12px
+  );
+  opacity: 0.6;
 }
 
-.corner-tl, .corner-tr, .corner-bl, .corner-br {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #ffb300;
+.corner-tl,
+.corner-tr,
+.corner-bl,
+.corner-br {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ffb300;
 }
 
 .corner-tl {
-    top: -2px;
-    left: -2px;
-    border-right: none;
-    border-bottom: none;
+  top: -2px;
+  left: -2px;
+  border-right: none;
+  border-bottom: none;
 }
 
 .corner-tr {
-    top: -2px;
-    right: -2px;
-    border-left: none;
-    border-bottom: none;
+  top: -2px;
+  right: -2px;
+  border-left: none;
+  border-bottom: none;
 }
 
 .corner-bl {
-    bottom: -2px;
-    left: -2px;
-    border-right: none;
-    border-top: none;
+  bottom: -2px;
+  left: -2px;
+  border-right: none;
+  border-top: none;
 }
 
 .corner-br {
-    bottom: -2px;
-    right: -2px;
-    border-left: none;
-    border-top: none;
+  bottom: -2px;
+  right: -2px;
+  border-left: none;
+  border-top: none;
 }
 
 .datalink-item {
@@ -285,7 +282,7 @@ body {
   word-break: break-all;
   color: #30d5c8;
   text-decoration: none;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   font-size: 14px;
   transition: all 0.3s ease;
   padding: 5px;
