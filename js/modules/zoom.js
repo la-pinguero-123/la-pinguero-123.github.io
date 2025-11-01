@@ -1,13 +1,12 @@
 const ZoomModule = (() => {
-  const mapContainer = document.querySelector(".map-container");
-  const mapWrapper = document.getElementById("mapWrapper");
+  const elements = UI.getElements();
   const controls = {
     zoomIn: document.getElementById("zoomIn"),
     zoomOut: document.getElementById("zoomOut"),
     zoomReset: document.getElementById("zoomReset"),
     zoomLevel: document.getElementById("zoomLevel"),
   };
-
+  
   let zoom = 1;
   let offsetX = 0;
   let offsetY = 0;
@@ -15,7 +14,7 @@ const ZoomModule = (() => {
   let dragStart = { x: 0, y: 0 };
 
   const update = () => {
-    mapWrapper.style.transform = `scale(${zoom}) translate(${
+    elements.mapWrapper.style.transform = `scale(${zoom}) translate(${
       offsetX / zoom
     }px, ${offsetY / zoom}px)`;
     controls.zoomLevel.textContent = Math.round(zoom * 100) + "%";
@@ -25,7 +24,7 @@ const ZoomModule = (() => {
   };
 
   const constrain = () => {
-    const rect = mapWrapper.getBoundingClientRect();
+    const rect = elements.mapWrapper.getBoundingClientRect();
     const maxOffsetX = (rect.width * (zoom - 1)) / (2 * zoom);
     const maxOffsetY = (rect.height * (zoom - 1)) / (2 * zoom);
 
@@ -55,7 +54,7 @@ const ZoomModule = (() => {
       update();
     });
 
-    mapContainer.addEventListener(
+    elements.mapContainer.addEventListener(
       "wheel",
       (e) => {
         if (e.ctrlKey) {
@@ -71,11 +70,11 @@ const ZoomModule = (() => {
       { passive: false }
     );
 
-    mapWrapper.addEventListener("mousedown", (e) => {
+    elements.mapWrapper.addEventListener("mousedown", (e) => {
       if (zoom > 1) {
         isDragging = true;
         dragStart = { x: e.clientX, y: e.clientY };
-        mapWrapper.classList.add("dragging");
+        elements.mapWrapper.classList.add("dragging");
       }
     });
 
@@ -85,7 +84,7 @@ const ZoomModule = (() => {
         offsetY += e.clientY - dragStart.y;
         dragStart = { x: e.clientX, y: e.clientY };
         constrain();
-        mapWrapper.style.transform = `scale(${zoom}) translate(${
+        elements.mapWrapper.style.transform = `scale(${zoom}) translate(${
           offsetX / zoom
         }px, ${offsetY / zoom}px)`;
         EventBus.emit("map:transform");
@@ -94,7 +93,7 @@ const ZoomModule = (() => {
 
     document.addEventListener("mouseup", () => {
       isDragging = false;
-      mapWrapper.classList.remove("dragging");
+      elements.mapWrapper.classList.remove("dragging");
     });
   };
 

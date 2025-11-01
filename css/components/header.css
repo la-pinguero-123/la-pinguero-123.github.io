@@ -28,3 +28,118 @@
   text-shadow: 0 0 8px var(--yellow-accent);
   letter-spacing: 1px;
 }
+
+.info-btn {
+  width: 100%;
+  background: var(--dark-panel);
+  border: 2px solid var(--red-primary);
+  padding: 10px 12px;
+  color: var(--text-primary);
+  font-family: "Courier New", monospace;
+  font-size: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 1px;
+  box-shadow: 0 0 10px rgba(255, 0, 110, 0.2);
+}
+
+.info-btn:hover {
+  background: rgba(255, 0, 110, 0.1);
+  border-color: var(--yellow-accent);
+  color: var(--yellow-accent);
+  box-shadow: 0 0 20px var(--yellow-accent);
+  text-shadow: 0 0 10px var(--yellow-accent);
+}
+
+.info-modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.info-modal.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  background: var(--dark-panel);
+  border: 2px solid var(--red-primary);
+  padding: 30px;
+  box-shadow: 0 0 40px rgba(255, 0, 110, 0.4);
+}
+
+.info-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: var(--red-primary);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.info-close:hover {
+  color: var(--yellow-accent);
+  text-shadow: 0 0 10px var(--yellow-accent);
+}
+
+.info-modal-title {
+  font-size: 18px;
+  color: var(--text-primary);
+  text-shadow: 0 0 10px var(--red-primary);
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--red-primary);
+  padding-bottom: 12px;
+}
+
+.info-modal-text {
+  color: var(--text-secondary);
+  font-size: 12px;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+}
+
+.info-modal-stats {
+  display: flex;
+  gap: 30px;
+  padding-top: 15px;
+  border-top: 2px solid var(--red-primary);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.stat-label {
+  font-size: 10px;
+  color: var(--yellow-accent);
+  text-shadow: 0 0 8px var(--yellow-accent);
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.stat-num {
+  font-size: 16px;
+  color: var(--green-status);
+  text-shadow: 0 0 10px var(--green-status);
+  font-weight: bold;
+}

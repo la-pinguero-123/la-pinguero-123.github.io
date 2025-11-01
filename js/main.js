@@ -16,4 +16,18 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   window.addEventListener("beforeunload", () => State.save());
+
+  UI.getElements().infoBtn.addEventListener("click", () => {
+    UI.toggleInfoModal(true);
+  });
+
+  document.getElementById("infoClose").addEventListener("click", () => {
+    UI.toggleInfoModal(false);
+  });
+
+  document.getElementById("infoModal").addEventListener("click", (e) => {
+    if (e.target === document.getElementById("infoModal")) {
+      UI.toggleInfoModal(false);
+    }
+  });
 });

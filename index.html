@@ -37,12 +37,43 @@
     </div>
   </div>
   <div id="main-content">
-    <div class="header-panel">
-      <div class="project-title">
-        <h1>⬢ КОНТАКТ</h1>
-        <p class="project-subtitle">КАРТА СПЕЦИАЛИСТОВ</p>
+<div class="header-panel">
+  <div class="project-title">
+    <h1>⬢ КОНТАКТ</h1>
+    <p class="project-subtitle">КАРТА СПЕЦИАЛИСТОВ</p>
+  </div>
+  <button class="info-btn" id="infoBtn">
+    <span class="info-icon">ⓘ</span>
+    <span class="info-label">ЧТО ЗДЕСЬ</span>
+  </button>
+  <div class="info-modal" id="infoModal">
+    <div class="info-modal-content">
+      <button class="info-close" id="infoClose">&times;</button>
+      <h2 class="info-modal-title">КОНТАКТ — КАРТА СПЕЦИАЛИСТОВ</h2>
+      <div class="info-modal-text">
+        <p>
+          Визуальная сеть профессионалов вашего города. Каждая светящаяся
+          точка на карте — реальный человек с опытом, портфолио и
+          историей.
+        </p>
+        <p>
+          Нажимайте на точки, чтобы открыть полные резюме. Используйте
+          поиск для быстрого поиска по нику.
+        </p>
+        <div class="info-modal-stats">
+          <div class="stat">
+            <span class="stat-label">СПЕЦИАЛИСТОВ НА КАРТЕ:</span>
+            <span class="stat-num">8</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">ВЕРСИЯ:</span>
+            <span class="stat-num">2.0</span>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
+</div>
     <div class="search-panel">
       <div class="search-container">
         <div class="search-label">ПОИСК ПО НИКУ</div>
@@ -149,6 +180,7 @@
   <script src="js/core/state.js"></script>
   <script src="js/core/eventBus.js"></script>
   <script src="js/modules/notifications.js"></script>
+  <script src="js/modules/ui.js"></script>
   <script src="js/modules/points.js"></script>
   <script src="js/modules/modal.js"></script>
   <script src="js/modules/search.js"></script>
