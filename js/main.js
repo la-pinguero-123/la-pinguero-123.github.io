@@ -1,18 +1,29 @@
 document.addEventListener("DOMContentLoaded", () => {
   State.load();
 
-  PointsModule.init();
-  SearchModule.init();
-  ZoomModule.init();
-  ModalModule.init();
-  NetworkModule.init();
-  AchievementsModule.init();
-  TutorialModule.init();
+  const mapImage = document.querySelector(".map-image");
 
-  if (State.getNetworkData().length >= 2) {
-    setTimeout(() => {
-      NetworkModule.draw();
-    }, 300);
+  const initializeApp = () => {
+    PointsModule.init();
+    SearchModule.init();
+    ZoomModule.init();
+    ModalModule.init();
+    NetworkModule.init();
+    AchievementsModule.init();
+    TutorialModule.init();
+    MapResizeModule.init();
+
+    if (State.getNetworkData().length >= 2) {
+      setTimeout(() => {
+        NetworkModule.draw();
+      }, 300);
+    }
+  };
+
+  if (mapImage.complete) {
+    initializeApp();
+  } else {
+    mapImage.addEventListener("load", initializeApp);
   }
 
   window.addEventListener("beforeunload", () => State.save());

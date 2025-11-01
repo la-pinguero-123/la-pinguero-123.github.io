@@ -7,6 +7,8 @@ const CONSTANTS = {
   LINE_DRAW_TIME: 1500,
   STORAGE_KEY: "kontakt_opened",
   VISIT_KEY: "kontakt_visited",
+  MAP_WIDTH: 3072,
+  MAP_HEIGHT: 1920,
   RESUMES: [
     {
       id: "person-1",
