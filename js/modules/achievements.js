@@ -7,8 +7,8 @@ const AchievementsModule = (() => {
       Notifications.send("КОНТАКТЫ НАЙДЕНЫ", "Прогресс: 2/9", "success");
     } else if (count === 5) {
       Notifications.send("ПОЛОВИНА ПУТИ ПРОЙДЕНА", "Прогресс: 5/9", "success");
-    } else if (count === 7) {
-      Notifications.send("ПОЧТИ ГОТОВО", "Прогресс: 7/9", "success");
+    } else if (count === 8) {
+      Notifications.send("ПОЧТИ ГОТОВО", "Прогресс: 8/9", "success");
     }
   };
 
@@ -72,7 +72,7 @@ const AchievementsModule = (() => {
         setTimeout(() => {
           Notifications.send(
             "КАРТА ПОЛНА",
-            "ВСЕ 8 КОНТАКТОВ ОТКРЫТЫ! 🔴",
+            "ВСЕ 9 КОНТАКТОВ ОТКРЫТЫ! 🔴",
             "success"
           );
         }, 7000);
