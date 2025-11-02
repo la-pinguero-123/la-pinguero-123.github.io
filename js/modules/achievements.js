@@ -4,11 +4,11 @@ const AchievementsModule = (() => {
 
   const check = (count) => {
     if (count === 2) {
-      Notifications.send("КОНТАКТЫ НАЙДЕНЫ", "Прогресс: 2/8", "success");
-    } else if (count === 4) {
-      Notifications.send("ПОЛОВИНА ПУТИ", "Прогресс: 4/8", "success");
-    } else if (count === 6) {
-      Notifications.send("ПОЧТИ ГОТОВО", "Прогресс: 6/8", "success");
+      Notifications.send("КОНТАКТЫ НАЙДЕНЫ", "Прогресс: 2/9", "success");
+    } else if (count === 5) {
+      Notifications.send("ПОЛОВИНА ПУТИ ПРОЙДЕНА", "Прогресс: 5/9", "success");
+    } else if (count === 7) {
+      Notifications.send("ПОЧТИ ГОТОВО", "Прогресс: 7/9", "success");
     }
   };
 
