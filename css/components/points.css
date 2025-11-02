@@ -3,7 +3,11 @@
   cursor: pointer;
   transform: translate(-50%, -50%);
   user-select: none;
-  z-index: 50;
+
+}
+
+.point:hover {
+  z-index: 300;
 }
 
 .point-icon {
@@ -69,7 +73,7 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s;
-  z-index: 100;
+  z-index: 400;
 }
 
 .point:hover .point-preview {
